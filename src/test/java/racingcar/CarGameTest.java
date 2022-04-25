@@ -5,7 +5,7 @@ import racingcar.domain.Cars;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class CarGameTest {
+class CarGameTest {
     @Test
     void 게임_시작() {
         Cars cars = new Cars();

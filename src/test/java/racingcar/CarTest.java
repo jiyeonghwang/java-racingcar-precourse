@@ -5,7 +5,7 @@ import racingcar.domain.Car;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CarTest {
+class CarTest {
     @Test
     void SCORE_계산() {
         Car car = new Car("TEST");

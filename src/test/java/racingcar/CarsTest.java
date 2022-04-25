@@ -6,7 +6,7 @@ import racingcar.domain.Cars;
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class CarsTest {
+class CarsTest {
     @Test
     void 자동차_이름_입력() {
         String carNameList = "car1,car2,car3";
