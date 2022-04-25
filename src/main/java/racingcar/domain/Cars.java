@@ -1,5 +1,6 @@
 package racingcar.domain;
 
+import racingcar.utils.Validation;
 import racingcar.view.OutputView;
 
 import java.util.ArrayList;
