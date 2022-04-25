@@ -5,6 +5,10 @@ import racingcar.domain.Car;
 import racingcar.domain.Cars;
 import racingcar.domain.Round;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+
 import static org.assertj.core.api.Assertions.*;
 
 class CarGameTest {
@@ -43,6 +47,17 @@ class CarGameTest {
             count++;
         }
         assertThat(cars.getCars().get(0).getScore()).isEqualTo(5);
+    }
+
+    @Test
+    void 승자_출력() {
+        Cars cars = Cars_생성();
+        cars.getCars().get(0).progress(1);
+        cars.getCars().get(0).progress(1);
+        cars.getCars().get(1).progress(4);
+        cars.getCars().get(1).progress(4);
+        Collections.sort(cars.getCars());
+        assertThat(cars.getCars().get(0).getName()).isEqualTo("car2");
     }
 
     void 라운드_회차(Cars cars) {

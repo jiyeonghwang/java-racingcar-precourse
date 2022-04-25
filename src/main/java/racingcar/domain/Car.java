@@ -1,6 +1,6 @@
 package racingcar.domain;
 
-public class Car {
+public class Car implements Comparable<Car>{
     private static int STANDARD_NUM = 4;
     private String name;
     private int score;
@@ -21,5 +21,16 @@ public class Car {
         if (value >= STANDARD_NUM) {
             this.score++;
         }
+    }
+
+    @Override
+    public int compareTo(Car car) {
+        if (this.getScore() < car.getScore()) {
+            return 1;
+        }
+        if (this.getScore() > car.getScore()) {
+            return -1;
+        }
+        return 0;
     }
 }
