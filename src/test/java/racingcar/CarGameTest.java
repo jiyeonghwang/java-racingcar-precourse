@@ -5,9 +5,7 @@ import racingcar.domain.Car;
 import racingcar.domain.Cars;
 import racingcar.domain.Round;
 
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 
 import static org.assertj.core.api.Assertions.*;
 

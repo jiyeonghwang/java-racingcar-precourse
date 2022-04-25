@@ -1,7 +1,6 @@
 package racingcar;
 
 import org.junit.jupiter.api.Test;
-import racingcar.domain.Cars;
 import racingcar.domain.Round;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
