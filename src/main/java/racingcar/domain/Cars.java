@@ -10,7 +10,7 @@ import java.util.Set;
 public class Cars {
     private List<Car> carList;
 
-    public Cars(String carNames) {
+    public void generateCars(String carNames) {
         String[] carNameSplit = carNames.split(",");
         validateCarName(carNameSplit);
         validateDuplicate(carNameSplit);
