@@ -8,8 +8,8 @@ public class Cars {
 
     public Cars(String carNames) {
         String[] carNameSplit = carNames.split(",");
-        List<Car> carList = addCars(carNameSplit);
-        this.carList = carList;
+        List<Car> tempCarList = addCars(carNameSplit);
+        this.carList = tempCarList;
     }
 
     public List<Car> addCars(String[] carNameSplit) {
