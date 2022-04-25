@@ -4,13 +4,16 @@ import racingcar.domain.Cars;
 import racingcar.view.InputView;
 
 public class CarGame {
-    public Cars carList(String input) {
-        Cars cars = inputCarNameList();
-        return cars;
+    public void start() {
+        Cars cars = new Cars();
+        inputCarNameList(cars);
     }
 
-    public Cars inputCarNameList (){
-        Cars cars = new Cars(InputView.printCarNameRequest());
-        return cars;
+    public void inputCarNameList (Cars cars){
+        try {
+            cars.generateCars(InputView.printCarNameRequest());
+        } catch (IllegalArgumentException e) {
+            inputCarNameList(cars);
+        }
     }
 }
