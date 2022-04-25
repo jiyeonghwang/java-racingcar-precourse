@@ -22,4 +22,11 @@ public class Validation {
             throw new IllegalArgumentException(OutputView.printInputCountError());
         }
     }
+
+    public static boolean isSameScore(int finalScore, int score) {
+        if (finalScore == score) {
+            return true;
+        }
+        return false;
+    }
 }
