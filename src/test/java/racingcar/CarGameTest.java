@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.*;
 
 class CarGameTest {
     @Test
-    void 게임_시작() {
+    void 자동차_이름_입력() {
         Cars cars = new Cars();
         String errorNameList="car1,car1";
         String carsNameList = "car1,car2";
