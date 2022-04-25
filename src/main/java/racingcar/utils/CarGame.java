@@ -6,6 +6,8 @@ import racingcar.domain.Round;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
+import java.util.Collections;
+
 import static camp.nextstep.edu.missionutils.Randoms.pickNumberInRange;
 
 public class CarGame {
@@ -16,6 +18,7 @@ public class CarGame {
         inputRoundCount(round);
         OutputView.printResult();
         startRound(cars, round);
+        finalResult(cars);
     }
 
     public void inputCarNameList(Cars cars) {
@@ -48,5 +51,24 @@ public class CarGame {
             OutputView.printCarPosition(car);
         }
         OutputView.printNewLine();
+    }
+
+    public void finalResult(Cars cars) {
+        Collections.sort(cars.getCars());
+        int finalScore = cars.getCars().get(0).getScore();
+        StringBuilder sb = new StringBuilder();
+        for (Car car : cars.getCars()) {
+            sb.append(getWinnerString(car, finalScore));
+        }
+        sb.deleteCharAt(sb.lastIndexOf(","));
+        OutputView.printWinner(sb.toString());
+    }
+
+    public String getWinnerString(Car car, int finalScore) {
+        String result = "";
+        if (Validation.isSameScore(finalScore, car.getScore())) {
+            result = car.getName() + ", ";
+        }
+        return result;
     }
 }
