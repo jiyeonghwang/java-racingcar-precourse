@@ -16,8 +16,10 @@ public class Validation {
     }
 
     public static void isNumeric(String count) {
-        if (count.matches("[1-9]+")) {
-            throw new IllegalArgumentException(OutputView.printInputError());
+        try {
+            Double.parseDouble(count);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException(OutputView.printInputCountError());
         }
     }
 }
